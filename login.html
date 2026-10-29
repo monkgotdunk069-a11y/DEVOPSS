@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Login</title>
+</head>
+<body>
+    <h2>Student Login</h2>
+
+    <label>Username:</label>
+    <input id="username" placeholder="Username">
+    <br><br>
+
+    <label>Password:</label>
+    <input id="password" type="password"
+           placeholder="Password">
+    <br><br>
+
+    <button id="login" onclick="checkLogin()">
+        Login
+    </button>
+
+    <p id="message"></p>
+
+    <script>
+        function checkLogin() {
+            const username =
+                document.getElementById("username").value;
+
+            const password =
+                document.getElementById("password").value;
+
+            const message =
+                document.getElementById("message");
+
+            if (username === "student" &&
+                password === "Password123") {
+                message.textContent = "Login successful";
+            } else {
+                message.textContent =
+                    "Invalid username or password";
+            }
+        }
+    </script>
+</body>
+</html>
